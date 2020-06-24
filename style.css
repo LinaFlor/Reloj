@@ -1,0 +1,138 @@
+body {
+    background-color: #dcd8f4;
+}
+
+.contenedor {
+    display: block;
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    position: relative;
+}
+
+.sailor {
+    position: absolute;
+    top: 20%;
+    left: 21%;
+    width: 46%;
+} 
+
+.borde  {
+    width: 57%;
+    height: 104%;
+    background-image: radial-gradient(#c18a9f, #B6B7E0);
+    border: 5px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color:#f041ba;
+    position: absolute;
+    left: 20.5%;
+    top: -1.2%;
+    box-shadow: inset 5px 5px 20px 5px rgba(0, 0, 0, 0.75),
+    20px 20px 25px 10px rgba(0, 0, 0, 0.75);
+} 
+
+.numeros {
+    width: 50%;
+    height: 70%;
+    margin-top: 2%;
+    position: relative;
+}
+.vidriopos { /*sólo la posición*/
+    width: 56%;
+    height: 102%;
+    position: absolute;
+    top: 37%;
+    left: 41%;
+    margin-left: -20%;
+    margin-top: -20%;
+    z-index: 12;
+}
+.vidrio {
+border-radius: 50%;
+border: solid 5px rgba(255,255,255,.1);
+background: linear-gradient(-45deg, rgba(255,255,255,.2) 60%, rgba(255,255,255,.05) 60%, rgba(255,255,255,.05) 80%, rgba(0,0,0,.1) 80%);
+}
+.horas {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    width: 1%;
+    height: 27%;
+    border-style: none;
+    border-radius: 40%;
+    background-color: #6D5191;
+    box-shadow: 10px 6px 7px 2px rgba(0, 0, 0, 0.75);
+    z-index: 2;
+
+    animation-name: rotar;
+    animation-duration: 43200s;
+    animation-timing-function: steps(60);
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    transform-origin: top;
+    transform: rotate(125deg);
+}
+
+.minutos {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    width: 1.2%;
+    height: 39%;
+    border-style: none;
+    border-radius: 40%;
+    background-color:#6D5191;
+    box-shadow: 10px 6px 7px 2px rgba(0, 0, 0, 0.75);
+    z-index: 3;
+    
+    animation-name: rotar;
+    animation-duration: 3600s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(60);
+    animation-direction: normal;
+    transform-origin: top;
+    transform: rotate(90deg);
+
+}
+
+
+.segundos {
+        position: absolute;
+        top: 52.5%;
+        left: 50%;
+        width: 4px;
+        height: 45%;
+        border-style: none;
+        background-color: #6D5191;
+        box-shadow: 10px 6px 7px 2px rgba(0, 0, 0, 0.75);
+        z-index: 1;
+        
+        animation-name: rotar;
+        animation-duration: 60s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(60);
+        animation-direction: normal;
+        transform-origin: top;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.eje {
+        width: 3%;
+        height: 5%;
+        background-color: black;
+        border-style: none;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 44.5%;
+        left: 49%;
+        z-index: 4;
+}
